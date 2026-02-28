@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9868ec77001a1842afc3256f14ae934
+guid: 964843ce21b7056469b36ead831ae5d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2174701419336364216
-    second: kart_0
+      213: 4942789374701161761
+    second: "kes\u0327is\u0327_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kart_0
+      name: "kes\u0327is\u0327_0"
       rect:
         serializedVersion: 2
-        x: 216
-        y: 86
-        width: 575
-        height: 873
+        x: 139
+        y: 1
+        width: 220
+        height: 392
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84f0be7c498e1d1e0800000000000000
-      internalID: -2174701419336364216
+      spriteID: 12d43ae8fb0589440800000000000000
+      internalID: 4942789374701161761
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kart_0: -2174701419336364216
+      "kes\u0327is\u0327_0": 4942789374701161761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

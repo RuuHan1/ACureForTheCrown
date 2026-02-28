@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c9868ec77001a1842afc3256f14ae934
+guid: ba9ea5a6983101e4ca507a3b2ed7e53b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2174701419336364216
-    second: kart_0
+      213: 1690501636759943826
+    second: tahtakart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 218, y: 89, z: 222, w: 123}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,23 +139,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kart_0
+      name: tahtakart_0
       rect:
         serializedVersion: 2
         x: 216
-        y: 86
+        y: 87
         width: 575
-        height: 873
+        height: 871
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84f0be7c498e1d1e0800000000000000
-      internalID: -2174701419336364216
+      spriteID: 29afa4f284ed57710800000000000000
+      internalID: 1690501636759943826
       vertices: []
       indices: 
       edges: []
@@ -165,7 +165,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kart_0: -2174701419336364216
+      tahtakart_0: 1690501636759943826
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

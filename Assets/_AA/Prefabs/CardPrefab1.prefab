@@ -352,6 +352,8 @@ MonoBehaviour:
   snapBackDuration: 0.3
   flyOffDuration: 0.4
   flyOffDistance: 1000
+  idleFloatAmount: 15
+  idleFloatDuration: 1.5
 --- !u!225 &4108755967178741705
 CanvasGroup:
   m_ObjectHideFlags: 0
