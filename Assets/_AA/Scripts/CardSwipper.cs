@@ -83,7 +83,6 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void SwipeRight()
     {
-        Debug.Log("Swiped right");
         _isAnimating = true;
 
         // TEKLI SESI CAL VE PITCH RASTGELELIGINI AKTIF ET
@@ -103,7 +102,6 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void SwipeLeft()
     {
-        Debug.Log("Swiped left");
         _isAnimating = true;
 
         // TEKLI SESI CAL VE PITCH RASTGELELIGINI AKTIF ET

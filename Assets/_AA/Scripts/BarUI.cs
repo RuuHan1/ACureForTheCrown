@@ -1,9 +1,10 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class BarUI : MonoBehaviour
 {
     public StatType statType;
-    [SerializeField] private UnityEngine.UI.Image fillImage; // Slider veya Image bileşeni
+    [SerializeField] private Image fillImage; // Slider veya Image bileşeni
+    private const float MIN_VISIBLE_FILL = 0.05f;
     private void Start()
     {
         fillImage.fillAmount = 0;
@@ -11,8 +12,29 @@ public class BarUI : MonoBehaviour
     }
     public void UpdateValue(int amount)
     {
-        // 0-1 arası normalize edilmiş değer hesapla
-        float newValue = Mathf.Clamp01(fillImage.fillAmount + (amount / 10f));
+        float rawValue = fillImage.fillAmount + (amount / 10f);
+        float newValue = Mathf.Clamp01(rawValue);
+
+        if (newValue > 0f && newValue < MIN_VISIBLE_FILL)
+            newValue = MIN_VISIBLE_FILL;
+
         fillImage.fillAmount = newValue;
+
+        if (statType == StatType.Cancer && rawValue <= 0f)
+        {
+            GameEvents.GameOver?.Invoke(true);
+            return;
+        }
+
+        if (statType == StatType.Cancer && rawValue >= 1f)
+        {
+            GameEvents.GameOver?.Invoke(false);
+            return;
+        }
+
+        if (statType != StatType.Cancer && rawValue <= 0f)
+        {
+            GameEvents.GameOver?.Invoke(false);
+        }
     }
 }

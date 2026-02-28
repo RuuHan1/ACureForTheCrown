@@ -143,8 +143,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: you must give her a garlic
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fc61fb31d31ec4a4ca741fe4d3490c56, type: 2}
+  m_sharedMaterial: {fileID: -4484481577996487266, guid: fc61fb31d31ec4a4ca741fe4d3490c56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -168,8 +168,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -347,6 +347,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b328b93cd24e9ba4d8a5eb41d8a918bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardSwipper
+  swipeThreshold: 150
+  rotationMultiplier: 15
+  snapBackDuration: 0.3
+  flyOffDuration: 0.4
+  flyOffDistance: 1000
 --- !u!225 &4108755967178741705
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -394,7 +399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8378185862735473210
@@ -502,8 +507,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Villager
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fc61fb31d31ec4a4ca741fe4d3490c56, type: 2}
+  m_sharedMaterial: {fileID: -4484481577996487266, guid: fc61fb31d31ec4a4ca741fe4d3490c56, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -527,8 +532,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
