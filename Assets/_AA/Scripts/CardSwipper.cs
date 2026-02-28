@@ -95,7 +95,7 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             .SetEase(Ease.InBack)
             .OnComplete(() =>
             {
-                GameEvents.CardSwiped?.Invoke(true, _card.cardData);
+                GameEvents.CardSwiped?.Invoke(SwipeDirection.Right, _card.cardData);
                 Destroy(gameObject);
             });
     }
@@ -114,8 +114,13 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             .SetEase(Ease.InBack)
             .OnComplete(() =>
             {
-                GameEvents.CardSwiped?.Invoke(false, _card.cardData);
+                GameEvents.CardSwiped?.Invoke(SwipeDirection.Left, _card.cardData);
                 Destroy(gameObject);
             });
+    }
+
+    private void SwipeDown()
+    {
+        GameEvents.CardSwiped?.Invoke(SwipeDirection.Down, _card.cardData);
     }
 }

@@ -22,10 +22,10 @@ public class BarController : MonoBehaviour
     {
         GameEvents.CardSwiped -= OnCardSwiped;
     }
-    private void OnCardSwiped(bool arg1, CardSO sO)
+    private void OnCardSwiped(SwipeDirection direction, CardSO sO)
     {
         
-        if (arg1)
+        if (direction == SwipeDirection.Right)
         {
             foreach(StatEffect effect in sO.RightChoice.Effects)
             {
@@ -35,9 +35,19 @@ public class BarController : MonoBehaviour
                 }
             }
         }
+        else if (direction == SwipeDirection.Left)
+        {
+            foreach (StatEffect effect in sO.LeftChoice.Effects)
+            {
+                if (bars.TryGetValue(effect.Stat, out BarUI bar))
+                {
+                    bar.UpdateValue(effect.Amount);
+                }
+            }
+        }
         else
         {
-            foreach (StatEffect effect in sO.RightChoice.Effects)
+            foreach (StatEffect effect in sO.DownChioce.Effects)
             {
                 if (bars.TryGetValue(effect.Stat, out BarUI bar))
                 {

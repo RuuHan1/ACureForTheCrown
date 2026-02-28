@@ -14,10 +14,13 @@ public class CardSO : ScriptableObject
     [Header("Choices")]
     [SerializeField] private SwipeChoice rightChoice;
     [SerializeField] private SwipeChoice leftChoice;
+    [SerializeField] private SwipeChoice downChoice;
+
 
     public SwipeChoice LeftChoice => leftChoice;
     public SwipeChoice RightChoice => rightChoice;
 
+    public SwipeChoice DownChioce => downChoice;
 
 }
 
@@ -42,4 +45,12 @@ public enum StatType
     Cancer,
     MentalHealth,
     ImmuneSystem,
+    Wealth,
+    Honor,
+}
+public enum SwipeDirection
+{
+    Right,
+    Left,
+    Down
 }

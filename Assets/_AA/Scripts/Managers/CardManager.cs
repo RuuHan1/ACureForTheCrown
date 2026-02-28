@@ -17,7 +17,7 @@ public class CardManager : MonoBehaviour
         GameEvents.CardSwiped += OnCardSwiped;
     }
 
-    private void OnCardSwiped(bool arg1, CardSO sO)
+    private void OnCardSwiped(SwipeDirection direction, CardSO sO)
     {
         GenerateCard();
     }
