@@ -15,19 +15,19 @@ MonoBehaviour:
   <Title>k__BackingField: Villager
   <Suggestion>k__BackingField: You must give her a garlic
   <ArtWork>k__BackingField: {fileID: 0}
+  rightChoice:
+    effects:
+    - Stat: 0
+      Amount: 0
+    - Stat: 1
+      Amount: -1
+    - Stat: 2
+      Amount: 2
   leftChoice:
     effects:
     - Stat: 0
       Amount: -1
     - Stat: 1
-      Amount: -1
+      Amount: 0
     - Stat: 2
       Amount: 0
-  rightChoice:
-    effects:
-    - Stat: 0
-      Amount: -1
-    - Stat: 1
-      Amount: 1
-    - Stat: 2
-      Amount: 2

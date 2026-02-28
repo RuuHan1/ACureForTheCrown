@@ -12,9 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21341a03ae115d429006894fb24ce6b, type: 3}
   m_Name: Stranger
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
-  <Title>k__BackingField: Villager
-  <Suggestion>k__BackingField: You must give her a garlic
+  <Title>k__BackingField: Stranger
+  <Suggestion>k__BackingField: You must give her a frog's leg
   <ArtWork>k__BackingField: {fileID: 0}
+  rightChoice:
+    effects:
+    - Stat: 0
+      Amount: -2
+    - Stat: 1
+      Amount: -2
+    - Stat: 2
+      Amount: 0
   leftChoice:
     effects:
     - Stat: 0
@@ -23,11 +31,3 @@ MonoBehaviour:
       Amount: -1
     - Stat: 2
       Amount: 0
-  rightChoice:
-    effects:
-    - Stat: 0
-      Amount: -1
-    - Stat: 1
-      Amount: 1
-    - Stat: 2
-      Amount: 2
