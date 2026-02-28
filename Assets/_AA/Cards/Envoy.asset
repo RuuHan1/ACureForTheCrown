@@ -10,24 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a21341a03ae115d429006894fb24ce6b, type: 3}
-  m_Name: herbalist
+  m_Name: Envoy
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
-  <Title>k__BackingField: Villager
-  <Suggestion>k__BackingField: You must give her a garlic
-  <ArtWork>k__BackingField: {fileID: 0}
+  <Title>k__BackingField: Ulak
+  <Suggestion>k__BackingField: Kiralim , sizi kiralligimizdaki kaplicaya davet ediyor
+  <ArtWork>k__BackingField: {fileID: 5837964790920026306, guid: e8de775acfcef4347b08a9d79945c875, type: 3}
   rightChoice:
     effects:
     - Stat: 0
-      Amount: 0
+      Amount: -1
     - Stat: 1
-      Amount: 2
+      Amount: 3
     - Stat: 2
-      Amount: 2
+      Amount: 1
+    - Stat: 3
+      Amount: -1
+    - Stat: 4
+      Amount: 1
   leftChoice:
     effects:
     - Stat: 0
-      Amount: -2
-    - Stat: 1
       Amount: 0
-    - Stat: 2
+    - Stat: 1
       Amount: -1
+    - Stat: 2
+      Amount: 0
+    - Stat: 3
+      Amount: 0
+    - Stat: 4
+      Amount: -1
+  downChoice:
+    effects:
+    - Stat: 4
+      Amount: -3
+    - Stat: 3
+      Amount: -2
