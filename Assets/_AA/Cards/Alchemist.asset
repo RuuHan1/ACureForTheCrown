@@ -12,12 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21341a03ae115d429006894fb24ce6b, type: 3}
   m_Name: Alchemist
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
-  <Title>k__BackingField: 
-  <Suggestion>k__BackingField: 
-  <ArtWork>k__BackingField: {fileID: 0}
+  <Title>k__BackingField: Alchemist
+  <Suggestion>k__BackingField: Your Majesty, I can distill a serum from moonlit silver
+    and phoenix ash
+  <ArtWork>k__BackingField: {fileID: -2674004897575637331, guid: a5e647d3847a93f498533fce53a29184, type: 3}
   rightChoice:
-    effects: []
+    effects:
+    - Stat: 0
+      Amount: -2
+    - Stat: 2
+      Amount: -3
   leftChoice:
-    effects: []
+    effects:
+    - Stat: 1
+      Amount: -1
   downChoice:
-    effects: []
+    effects:
+    - Stat: 4
+      Amount: -1
