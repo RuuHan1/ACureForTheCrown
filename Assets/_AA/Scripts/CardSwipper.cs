@@ -35,13 +35,8 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
     private void SwipeRight()
     {
-        
-
-        Debug.Log("swiped right");
         GameEvents.CardSwiped?.Invoke(true,_card.cardData);
         Destroy(gameObject);
-
-        
     }
 
     private void SwipeLeft()

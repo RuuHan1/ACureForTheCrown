@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class BarUI : MonoBehaviour
@@ -11,8 +12,29 @@ public class BarUI : MonoBehaviour
     }
     public void UpdateValue(int amount)
     {
-        // 0-1 arası normalize edilmiş değer hesapla
         float newValue = Mathf.Clamp01(fillImage.fillAmount + (amount / 10f));
         fillImage.fillAmount = newValue;
+
+        if (statType == StatType.Cancer && newValue <= 0f)
+        {
+            GameEvents.GameOver?.Invoke(true); // Kazandın
+            Debug.Log("True");
+            return; // Fonksiyondan çık
+        }
+        if (statType == StatType.Cancer && newValue >= 1f)
+        {
+            GameEvents.GameOver?.Invoke(false); // Kaybettin
+            Debug.Log("False");
+
+            return;
+        }
+
+        if (statType != StatType.Cancer && newValue <= 0f)
+        {
+            GameEvents.GameOver?.Invoke(false); // Kaybettin
+            Debug.Log("False");
+
+            return;
+        }
     }
 }
