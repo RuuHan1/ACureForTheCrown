@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CardManager : MonoBehaviour
@@ -7,6 +6,7 @@ public class CardManager : MonoBehaviour
     [SerializeField] private List<CardSO> cardDatas;
     [SerializeField] private GameObject _cardPrefab;
     [SerializeField] private RectTransform _cardPanel;
+
     private void Awake()
     {
         GenerateCard();
@@ -15,6 +15,11 @@ public class CardManager : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.CardSwiped += OnCardSwiped;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.CardSwiped -= OnCardSwiped;
     }
 
     private void OnCardSwiped(SwipeDirection direction, CardSO sO)
@@ -27,7 +32,8 @@ public class CardManager : MonoBehaviour
         GameObject gameObj = Instantiate(_cardPrefab, _cardPanel);
 
         RectTransform rt = gameObj.GetComponent<RectTransform>();
-        rt.localPosition = Vector3.one; 
+
+        rt.localPosition = Vector3.one;
         rt.localRotation = Quaternion.identity;
         rt.localScale = Vector3.one;
 
@@ -35,6 +41,4 @@ public class CardManager : MonoBehaviour
         int dice = Random.Range(0, cardDatas.Count);
         card.Setup(cardDatas[dice]);
     }
-
-
 }

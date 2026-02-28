@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// UI YONETICISI
 public class BarController : MonoBehaviour
 {
     [SerializeField] private List<BarUI> barList = new();
@@ -11,51 +12,28 @@ public class BarController : MonoBehaviour
         bars = new Dictionary<StatType, BarUI>();
         foreach (var bar in barList)
         {
+            if (bars.ContainsKey(bar.statType)) continue;
             bars.Add(bar.statType, bar);
         }
     }
+
     private void OnEnable()
     {
-        GameEvents.CardSwiped += OnCardSwiped;
+        // ARTIK KART KAYDIRILDIGINDA DEGIL, KINGDOM MANAGER "STAT DEGISTI" DEDIGINDE CALISIYOR
+        GameEvents.StatChanged += OnStatChanged;
     }
+
     private void OnDisable()
     {
-        GameEvents.CardSwiped -= OnCardSwiped;
+        GameEvents.StatChanged -= OnStatChanged;
     }
-    private void OnCardSwiped(SwipeDirection direction, CardSO sO)
+
+    private void OnStatChanged(StatType type, float normalizedValue)
     {
-        
-        if (direction == SwipeDirection.Right)
+        // Eger o stat tipinde bir UI barimiz varsa, degerini (yuzdesini) guncelle
+        if (bars.TryGetValue(type, out BarUI bar))
         {
-            foreach(StatEffect effect in sO.RightChoice.Effects)
-            {
-                if (bars.TryGetValue(effect.Stat, out BarUI bar))
-                {
-                    bar.UpdateValue(effect.Amount);
-                }
-            }
-        }
-        else if (direction == SwipeDirection.Left)
-        {
-            foreach (StatEffect effect in sO.LeftChoice.Effects)
-            {
-                if (bars.TryGetValue(effect.Stat, out BarUI bar))
-                {
-                    bar.UpdateValue(effect.Amount);
-                }
-            }
-        }
-        else
-        {
-            foreach (StatEffect effect in sO.DownChioce.Effects)
-            {
-                if (bars.TryGetValue(effect.Stat, out BarUI bar))
-                {
-                    bar.UpdateValue(effect.Amount);
-                }
-            }
+            bar.SetFill(normalizedValue);
         }
     }
 }
-
-
