@@ -1,8 +1,8 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Sahneyi yeniden yuklemek icin
-using DG.Tweening; // Animasyonlar icin
+using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,12 +11,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _infoImage;
     [SerializeField] private TMP_Text _infoText;
 
-    // Caching yerine manuel atama icin SerializeField eklendi
-    [Tooltip("Arka plani karartacak olan Image bileseni")]
+    [Tooltip("Arka plani karartacak/renklendirecek olan Image bileseni")]
     [SerializeField] private Image _panelImage;
 
     [Header("Buttons")]
     [SerializeField] private Button _restartButton;
+
+    // YENI: Oyun ici Hapse At butonu buraya eklendi
+    [SerializeField] private Button _imprisonButton;
 
     private void Awake()
     {
@@ -24,6 +26,12 @@ public class UIManager : MonoBehaviour
         if (_restartButton != null)
         {
             _restartButton.onClick.AddListener(RestartGame);
+        }
+
+        // YENI: Imprison butonunu GameEvents sinyaline bagliyoruz
+        if (_imprisonButton != null)
+        {
+            _imprisonButton.onClick.AddListener(() => GameEvents.ImprisonButtonClicked?.Invoke());
         }
 
         // Oyun basinda Game Over ekranini gizle
@@ -34,7 +42,6 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         GameEvents.GameOver += OnGameOver;
-
     }
 
     private void OnDisable()
@@ -44,10 +51,16 @@ public class UIManager : MonoBehaviour
 
     private void OnGameOver(bool isWin)
     {
+        // Oyun bittiginde arkaplandaki Hapse At butonuna basilmasini engellemek icin kapatiyoruz
+        if (_imprisonButton != null)
+        {
+            _imprisonButton.gameObject.SetActive(false);
+        }
+
         _infoPanel.SetActive(true);
         _infoImage.SetActive(true);
 
-        // 1. Popup Animasyonu: _infoImage objesini kucukten buyuge yaylanarak (OutBack) ekrana cikar
+        // 1. Popup Animasyonu
         _infoImage.transform.localScale = Vector3.zero;
         _infoImage.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack).SetDelay(0.2f);
 
@@ -57,34 +70,26 @@ public class UIManager : MonoBehaviour
         if (isWin)
         {
             _infoText.text = "You win";
-            // Kazanma durumu icin altinsi/sari bir renk belirliyoruz
-            targetColor = new Color(1f, 0.8f, 0f);
+            targetColor = new Color(161f, 144f, 37f);
         }
         else
         {
             _infoText.text = "You lose";
-            // Kaybetme durumu icin kirmizi renk belirliyoruz
             targetColor = Color.red;
         }
 
-        // 3. Arka Plan Animasyonu: DOTween ile pruzsuzce karartma/renklendirme
+        // 3. Arka Plan Animasyonu
         if (_panelImage != null)
         {
-            // Renkleri ata ama once Alpha'yi (saydamligi) sifir yap ki yavasca karararak gelsin
             targetColor.a = 0f;
             _panelImage.color = targetColor;
-
-            // 1 saniye icerisinde yavasca %50 seffafliga (0.5f) ulas (Fade In)
             _panelImage.DOFade(0.5f, 1f);
         }
     }
 
     private void RestartGame()
     {
-        // Sahneyi yeniden yuklerken arkada takili kalan animasyonlari temizle (Memory Leak onlemi)
         DOTween.KillAll();
-
-        // Aktif sahneyi (Mevcut leveli) bastan yukler
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

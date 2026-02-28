@@ -6,5 +6,7 @@ public static class GameEvents
     public static Action<SwipeDirection,CardSO> CardSwiped;
     public static Action<bool> GameOver;
     public static Action<StatType, float> StatChanged;
+    public static Action ImprisonButtonClicked;
+
 
 }

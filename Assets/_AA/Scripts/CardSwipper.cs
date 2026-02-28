@@ -8,8 +8,8 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 {
     private Card _card;
 
-    private Vector3 _centerPosition; // Kartin ilk dogdugu kusursuz merkez (0,0,0)
-    private Vector2 _startPosition; // Oyuncunun karti tuttugu anki pozisyon
+    private Vector3 _centerPosition;
+    private Vector3 _startPosition;
     private Quaternion _startRotation;
 
     [Header("Swipe Settings")]
@@ -22,9 +22,7 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     [SerializeField] private float flyOffDistance = 1000f;
 
     [Header("Idle Floating Animation")]
-    [Tooltip("Kart bosta dururken ne kadar asagi inip cikacak")]
     [SerializeField] private float idleFloatAmount = 15f;
-    [Tooltip("Bir asagi-yukari salinim ne kadar surecek")]
     [SerializeField] private float idleFloatDuration = 1.5f;
 
     private bool _isAnimating = false;
@@ -32,18 +30,51 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private void Start()
     {
         _card = GetComponent<Card>();
-
-        // Kartin dogdugu anki pozisyonunu merkez kabul ediyoruz
         _centerPosition = transform.localPosition;
 
         StartIdleAnimation();
     }
 
+    private void OnEnable()
+    {
+        GameEvents.GameOver += OnGameOver;
+
+        // YENI: Butondan gelen Hapse At sinyalini dinlemeye basla
+        GameEvents.ImprisonButtonClicked += OnImprisonButtonClicked;
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.GameOver -= OnGameOver;
+        GameEvents.ImprisonButtonClicked -= OnImprisonButtonClicked;
+    }
+
+    // YENI: Butona basildigi sinyali gelince tetiklenen metot
+    private void OnImprisonButtonClicked()
+    {
+        // Eger kart zaten baska bir yere firlatiliyorsa cakisip bug olmamasi icin iptal et
+        if (_isAnimating) return;
+
+        // Surtunme veya mouse kullanmadan direkt SwipeDown (Asagi atma) fonksiyonunu calistir
+        _startPosition = transform.localPosition; // Nerede duruyorsa oradan asagi ucsun
+        SwipeDown();
+    }
+
+    private void OnDestroy()
+    {
+        transform.DOKill();
+    }
+
+    private void OnGameOver(bool isWin)
+    {
+        _isAnimating = true;
+        transform.DOKill();
+    }
+
     private void StartIdleAnimation()
     {
-        // Kartin merkezin ustune cikmasini istemedigimiz icin, 
-        // merkezden 'idleFloatAmount' kadar asagiya inip tekrar merkeze cikmasini (Yoyo) sagliyoruz.
-        // Ease.InOutSine secimi nefes alip verme (organik salinim) hissi yaratir.
+        transform.DOKill();
+
         transform.DOLocalMoveY(_centerPosition.y - idleFloatAmount, idleFloatDuration)
             .SetEase(Ease.InOutSine)
             .SetLoops(-1, LoopType.Yoyo);
@@ -53,12 +84,11 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         if (_isAnimating) return;
 
-        // Oyuncu karta dokundugu an salinim (floating) animasyonunu oldururuz
         transform.DOKill();
 
-        // Kartin o an salinimda kaldigi yeri baslangic pozisyonu sayiyoruz
         _startPosition = transform.localPosition;
         _startRotation = transform.localRotation;
+        transform.localScale = Vector3.one;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -68,13 +98,8 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         Vector3 currentPosition = transform.localPosition;
         currentPosition.x += eventData.delta.x;
         currentPosition.y += eventData.delta.y;
-
-        // KARTIN YUKARI GITMESINI ENGELLEME: (Salinim sirasinda bug olmamasi icin _centerPosition baz alindi)
-        currentPosition.y = Mathf.Min(currentPosition.y, _centerPosition.y);
-
         transform.localPosition = currentPosition;
 
-        // Donme efekti
         float differenceX = transform.localPosition.x - _startPosition.x;
         float rotationZ = -(differenceX / swipeThreshold) * rotationMultiplier;
         transform.localRotation = Quaternion.Euler(0, 0, rotationZ);
@@ -87,31 +112,37 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         float differenceX = transform.localPosition.x - _startPosition.x;
         float differenceY = transform.localPosition.y - _startPosition.y;
 
-        if (Mathf.Abs(differenceX) > Mathf.Abs(differenceY))
+        // Artik asagi fiziksel kaydirma devre disi, sadece saga ve sola kaydirma var.
+        // Hapse atma islemi sadece UI butonundan yapilacak.
+        if (differenceX > swipeThreshold)
         {
-            if (differenceX > swipeThreshold) SwipeRight();
-            else if (differenceX < -swipeThreshold) SwipeLeft();
-            else ResetCardPosition();
+            SwipeRight();
+        }
+        else if (differenceX < -swipeThreshold)
+        {
+            SwipeLeft();
         }
         else
         {
-            if (differenceY < -swipeThreshold) SwipeDown();
-            else ResetCardPosition();
+            ResetCardPosition();
         }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Tiklama islevi bos birakildi
+        // Bos
     }
 
     private void ResetCardPosition()
     {
-        // Oyuncu karti birakip vazgectiyse, karti dogdugu orijinal merkeze (_centerPosition) geri dondur.
-        transform.DOLocalMove(_centerPosition, snapBackDuration).SetEase(Ease.OutBack)
-            .OnComplete(StartIdleAnimation); // Kart tam yerine oturdugunda (OnComplete) tekrar süzülmeye (nefes almaya) baslasin.
+        transform.DOKill();
 
-        transform.DOLocalRotateQuaternion(Quaternion.identity, snapBackDuration).SetEase(Ease.OutBack);
+        transform.DOLocalMove(_centerPosition, snapBackDuration)
+            .SetEase(Ease.OutBack)
+            .OnComplete(() => StartIdleAnimation());
+
+        transform.DOLocalRotateQuaternion(Quaternion.identity, snapBackDuration)
+            .SetEase(Ease.OutBack);
     }
 
     private void SwipeRight()
@@ -147,6 +178,9 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         _isAnimating = true;
         PlaySwipeSound();
 
+        Debug.Log("Card Imprisoned via Button! (Karakter butona basilarak hapse atildi)");
+
+        // Karti asagi (zindana) firlat
         transform.DOLocalMoveY(_startPosition.y - flyOffDistance, flyOffDuration)
             .SetEase(Ease.InBack)
             .OnComplete(() =>
