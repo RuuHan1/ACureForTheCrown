@@ -15,7 +15,7 @@ MonoBehaviour:
   <Title>k__BackingField: Witcher
   <Suggestion>k__BackingField: "Your Majesty, I can hunt the leshen in the northern
     woods \u2014 its mutagenic extract may strengthen her body."
-  <ArtWork>k__BackingField: {fileID: 807228877658405035, guid: 879f993660ac57348b28661ed7f72b3b, type: 3}
+  <ArtWork>k__BackingField: {fileID: 7742747498303896139, guid: ba7636942904e2047aa75fde0e922a37, type: 3}
   rightChoice:
     effects:
     - Stat: 0
