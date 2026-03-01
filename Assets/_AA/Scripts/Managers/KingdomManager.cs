@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// OYUNUN BEYNI (Model & Controller) - Tum mantik, hesaplamalar ve rastgelelik burada
+// THE BRAIN OF THE GAME (Model & Controller) - All logic, calculations, and randomness are handled here
 public class KingdomManager : MonoBehaviour
 {
     public static KingdomManager Instance { get; private set; }
@@ -11,7 +11,7 @@ public class KingdomManager : MonoBehaviour
     [SerializeField] private int maxStartValue = 60;
 
     [Header("Stat Limits")]
-    [SerializeField] private int maxStatValue = 100; // Statlarin ulasabilecegi maksimum deger
+    [SerializeField] private int maxStatValue = 100; // The maximum value stats can reach
 
     private Dictionary<StatType, int> _currentStats = new Dictionary<StatType, int>();
 
@@ -25,7 +25,6 @@ public class KingdomManager : MonoBehaviour
 
     private void Start()
     {
-        // Oyun ilk basladiginda tum arayuzu (UI) bu rastgele 40-60 arasi degerlerle dolduruyoruz
         foreach (var stat in _currentStats)
         {
             UpdateUI(stat.Key);
@@ -44,7 +43,6 @@ public class KingdomManager : MonoBehaviour
 
     private void InitializeStats()
     {
-        // Her stat icin verilen aralikta (Orn: 40-60) rastgele baslangic degeri belirliyoruz
         _currentStats[StatType.Cancer] = Random.Range(minStartValue, maxStartValue + 1);
         _currentStats[StatType.MentalHealth] = Random.Range(minStartValue, maxStartValue + 1);
         _currentStats[StatType.ImmuneSystem] = Random.Range(minStartValue, maxStartValue + 1);
@@ -78,20 +76,11 @@ public class KingdomManager : MonoBehaviour
         {
             if (_currentStats.ContainsKey(effect.Stat))
             {
-                // ONEMLI NOT: Senin CardSO icindeki statlar -3 ile +3 arasindaydi.
-                // Biz sistemi 100 uzerinden (max 100) kurguladigimiz icin bu kucuk sayilari
-                // 10 ile carparak (-30, +30) buyuk bir etki yaratmasini sagliyoruz.
                 int changeAmount = effect.Amount * 10;
-
                 _currentStats[effect.Stat] += changeAmount;
-
-                // Degeri 0 ile 100 arasinda disari tasmayacak sekilde kelepcele (Clamp)
                 _currentStats[effect.Stat] = Mathf.Clamp(_currentStats[effect.Stat], 0, maxStatValue);
 
-                // Matematik bitti, arayuzu guncelle
                 UpdateUI(effect.Stat);
-
-                // Oyunun bitip bitmedigini kontrol et
                 CheckGameOverConditions(effect.Stat, _currentStats[effect.Stat]);
             }
         }
@@ -99,33 +88,49 @@ public class KingdomManager : MonoBehaviour
 
     private void UpdateUI(StatType type)
     {
-        // Eger guncel stat 45 ise, 45 / 100f = 0.45f yuzdesini UI'a yolluyoruz.
         float normalizedValue = (float)_currentStats[type] / maxStatValue;
         GameEvents.StatChanged?.Invoke(type, normalizedValue);
     }
 
     private void CheckGameOverConditions(StatType type, int currentValue)
     {
-        // BarUI'in icinde yazan eski kurallarini buraya, asil olmasi gereken yere tasidik
         if (type == StatType.Cancer)
         {
             if (currentValue <= 0)
             {
-                Debug.Log("Kanser tamamen bitti, kazandin!");
-                GameEvents.GameOver?.Invoke(true); // You Win
+                string winMessage = "The cancer has been completely eradicated! The princess is saved, and the kingdom breathes a sigh of relief.";
+                GameEvents.GameOver?.Invoke(true, winMessage);
             }
             else if (currentValue >= maxStatValue)
             {
-                Debug.Log("Kanser vucudu ele gecirdi, kaybettin!");
-                GameEvents.GameOver?.Invoke(false); // You Lose
+                string loseMessage = "The cancer has consumed her entire body... The princess has passed away, and the kingdom is in mourning.";
+                GameEvents.GameOver?.Invoke(false, loseMessage);
             }
         }
-        else // Diger statlar
+        else
         {
+            // Generate story texts when other stats are depleted
             if (currentValue <= 0)
             {
-                Debug.Log($"Oyun bitti! Tuketilen stat: {type}");
-                GameEvents.GameOver?.Invoke(false); // You Lose
+                string loseMessage = "Game over!"; // Default
+
+                switch (type)
+                {
+                    case StatType.MentalHealth:
+                        loseMessage = "The princess's mental health has completely collapsed. Having lost the strength to rule, she is now trapped in darkness.";
+                        break;
+                    case StatType.ImmuneSystem:
+                        loseMessage = "Her immune system has failed. Even a simple illness spreading through the palace was enough to defeat the princess...";
+                        break;
+                    case StatType.Wealth:
+                        loseMessage = "The treasury is completely empty! Without wages, the soldiers rebelled and the palace was looted.";
+                        break;
+                    case StatType.Honor:
+                        loseMessage = "The kingdom's honor has been trampled. The people no longer see you as a leader; you have been overthrown!";
+                        break;
+                }
+
+                GameEvents.GameOver?.Invoke(false, loseMessage);
             }
         }
     }

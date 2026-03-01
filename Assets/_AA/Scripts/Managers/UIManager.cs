@@ -9,16 +9,22 @@ public class UIManager : MonoBehaviour
     [Header("Panels")]
     [SerializeField] private GameObject _infoPanel;
     [SerializeField] private GameObject _infoImage;
-    [SerializeField] private TMP_Text _infoText;
 
+    [Header("Texts")]
+    // YENI: Oyunun sonucunu "You Win" / "You Lose" olarak gosterecek baslik metni
+    [SerializeField] private TMP_Text _endingHeader;
+    [SerializeField] private TMP_Text _infoText; // Hikaye detayini gosterecek metin
+
+    [Header("Images")]
     [Tooltip("Arka plani karartacak/renklendirecek olan Image bileseni")]
     [SerializeField] private Image _panelImage;
 
     [Header("Buttons")]
     [SerializeField] private Button _restartButton;
-
-    // YENI: Oyun ici Hapse At butonu buraya eklendi
     [SerializeField] private Button _imprisonButton;
+
+    // PERFORMAS TAVSİYESİ (Caching)
+    private Image _infoImageComponent;
 
     private void Awake()
     {
@@ -28,10 +34,16 @@ public class UIManager : MonoBehaviour
             _restartButton.onClick.AddListener(RestartGame);
         }
 
-        // YENI: Imprison butonunu GameEvents sinyaline bagliyoruz
+        // Imprison butonunu GameEvents sinyaline bagliyoruz
         if (_imprisonButton != null)
         {
             _imprisonButton.onClick.AddListener(() => GameEvents.ImprisonButtonClicked?.Invoke());
+        }
+
+        // infoImage uzerindeki Image bilesenini hafizaya al
+        if (_infoImage != null)
+        {
+            _infoImageComponent = _infoImage.GetComponent<Image>();
         }
 
         // Oyun basinda Game Over ekranini gizle
@@ -49,7 +61,7 @@ public class UIManager : MonoBehaviour
         GameEvents.GameOver -= OnGameOver;
     }
 
-    private void OnGameOver(bool isWin)
+    private void OnGameOver(bool isWin, string message)
     {
         // Oyun bittiginde arkaplandaki Hapse At butonuna basilmasini engellemek icin kapatiyoruz
         if (_imprisonButton != null)
@@ -64,19 +76,34 @@ public class UIManager : MonoBehaviour
         _infoImage.transform.localScale = Vector3.zero;
         _infoImage.transform.DOScale(Vector3.one, 0.5f).SetEase(Ease.OutBack).SetDelay(0.2f);
 
-        // 2. Kazanma ve Kaybetme Durumu Icin Yazi ve Renk Ayarlari
+        // 2. Kazanma ve Kaybetme Durumu Icin Renk Ayarlari ve Baslik Metni
         Color targetColor;
+        Color popupBackgroundColor;
 
         if (isWin)
         {
-            _infoText.text = "You win";
-            targetColor = new Color(161f, 144f, 37f);
-            
+            // YENI: Basligi ayarla
+            if (_endingHeader != null) _endingHeader.text = "You Win";
+
+            targetColor = new Color(161f / 255f, 144f / 255f, 37f / 255f);
+            popupBackgroundColor = new Color(1f, 0.9f, 0.5f);
         }
         else
         {
-            _infoText.text = "You lose";
+            // YENI: Basligi ayarla
+            if (_endingHeader != null) _endingHeader.text = "You Lose";
+
             targetColor = Color.red;
+            popupBackgroundColor = new Color(1f, 0.7f, 0.7f);
+        }
+
+        // Ekrana KingdomManager'dan gelen hikayeli aciklama metnini basiyoruz
+        if (_infoText != null) _infoText.text = message;
+
+        // infoImage'in (ortadaki panelin) arka plan rengini degistir
+        if (_infoImageComponent != null)
+        {
+            _infoImageComponent.color = popupBackgroundColor;
         }
 
         // 3. Arka Plan Animasyonu
