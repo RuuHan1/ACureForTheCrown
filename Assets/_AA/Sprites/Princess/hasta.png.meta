@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2751a439ec0f2814083d1dfff175d05c
+guid: beeb1a72b8e385d40832f7ce351ac9e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -750570153076305590
-    second: "ku\u0308c\u0327u\u0308kkart_0"
+      213: 1002697732240369693
+    second: hasta_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,11 +46,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
-  spritePivot: {x: 0.5, y: 0.38}
+  spritePivot: {x: 0.51226825, y: 0.4914122}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,7 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "ku\u0308c\u0327u\u0308kkart_0"
+      name: hasta_0
       rect:
         serializedVersion: 2
-        x: 246
-        y: 104
-        width: 410
-        height: 489
+        x: 1
+        y: 0
+        width: 367
+        height: 398
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4150e62c607595f0800000000000000
-      internalID: -750570153076305590
+      spriteID: d18e643664c4aed00800000000000000
+      internalID: 1002697732240369693
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "ku\u0308c\u0327u\u0308kkart_0": -750570153076305590
+      hasta_0: 1002697732240369693
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

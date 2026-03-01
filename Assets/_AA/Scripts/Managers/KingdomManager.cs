@@ -93,6 +93,11 @@ public class KingdomManager : MonoBehaviour
 
                 // Oyunun bitip bitmedigini kontrol et
                 CheckGameOverConditions(effect.Stat, _currentStats[effect.Stat]);
+                if (effect.Stat == StatType.Cancer)
+                {
+                    int stage = CalculateCancerStage(_currentStats[StatType.Cancer]);
+                    GameEvents.CancerStageChanged?.Invoke(stage);
+                }
             }
         }
     }
@@ -128,5 +133,11 @@ public class KingdomManager : MonoBehaviour
                 GameEvents.GameOver?.Invoke(false); // You Lose
             }
         }
+    }
+    private int CalculateCancerStage(int value)
+    {
+        if (value <= 30) return 0;      // 0-30 arası (Hafif)
+        if (value <= 70) return 1;      // 31-70 arası (Orta)
+        return 2;                       // 71-100 arası (Ağır)
     }
 }

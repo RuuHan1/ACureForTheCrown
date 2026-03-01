@@ -11,7 +11,7 @@ public class Card : MonoBehaviour
     [SerializeField] private Image _fgImage;
     [SerializeField] private TMP_Text _titleText;
     [SerializeField] private TMP_Text _suggestionText;
-
+    private TMP_Text _priceText;
 
     public void Setup(CardSO cardData)
     {
@@ -19,6 +19,14 @@ public class Card : MonoBehaviour
         _fgImage.sprite = cardData.ArtWork;
         _titleText.text = cardData.Title;
         _suggestionText.text = cardData.Suggestion;
-    
+        _priceText.text = "";
+        foreach (var effect in cardData.RightChoice.Effects)
+        {
+            if (effect.Stat == StatType.Wealth)
+            {
+                _priceText.text =( effect.Amount *10).ToString();
+                break; // İlgili stat bulunduktan sonra döngüye devam etmeye gerek yok
+            }
+        }
     }
 }
