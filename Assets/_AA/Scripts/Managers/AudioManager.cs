@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 // Singleton Pattern: Oyun boyunca sadece bir tane AudioManager olmasini garantileriz.
@@ -21,7 +22,7 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Sahne degisse bile muzik kesilmez
+            //DontDestroyOnLoad(gameObject); // Sahne degisse bile muzik kesilmez
         }
         else
         {
@@ -29,14 +30,25 @@ public class AudioManager : MonoBehaviour
             return; // Eger bu kopya yok edilecekse, asagidaki kodlarin calismasini engelle
         }
     }
-
-    private void Start()
+    private void OnEnable()
     {
-        // Oyun basladiginda arka plan muzigini otomatik cal
+        GameEvents.GameStarted += OnGameStarted;
+    }
+    private void OnDisable()
+    {
+        GameEvents.GameStarted -= OnGameStarted;
+    }
+    private void OnGameStarted()
+    {
         if (backgroundMusic != null)
         {
             PlayMusic(backgroundMusic);
         }
+    }
+
+    private void Start()
+    {
+        
     }
 
     /// <summary>

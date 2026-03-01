@@ -7,6 +7,7 @@ public static class GameEvents
     public static Action<bool> GameOver;
     public static Action<StatType, float> StatChanged;
     public static Action ImprisonButtonClicked;
+    public static Action GameStarted;
 
 
 }

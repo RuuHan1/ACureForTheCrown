@@ -10,29 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a21341a03ae115d429006894fb24ce6b, type: 3}
-  m_Name: Jester
+  m_Name: Guardian 1
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
-  <Title>k__BackingField: Jester
-  <Suggestion>k__BackingField: "Your Majesty, we ask the illness to leave \u2014
-    or face a dance duel."
-  <ArtWork>k__BackingField: {fileID: 7647298288565211277, guid: ba7538151b097ff46ba64f0110b552c0, type: 3}
+  <Title>k__BackingField: Guardian
+  <Suggestion>k__BackingField: Your Majesty, grant me leave to seek the ancient hermit
+    beyond the northern cliffs. They say no ailment withstands his wisdom.
+  <ArtWork>k__BackingField: {fileID: 7607910846721936991, guid: 7666d0407b86e7f4c8b54a76a3f00989, type: 3}
   rightChoice:
     effects:
     - Stat: 0
-      Amount: -1
-    - Stat: 1
-      Amount: 0
-    - Stat: 2
-      Amount: 0
+      Amount: -2
     - Stat: 3
-      Amount: 0
-    - Stat: 4
       Amount: -1
   leftChoice:
     effects:
-    - Stat: 4
+    - Stat: 3
       Amount: 1
+    - Stat: 0
+      Amount: -1
   downChoice:
     effects:
     - Stat: 4
-      Amount: 2
+      Amount: -1
+    - Stat: 3
+      Amount: 1

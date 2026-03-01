@@ -71,6 +71,7 @@ public class UIManager : MonoBehaviour
         {
             _infoText.text = "You win";
             targetColor = new Color(161f, 144f, 37f);
+            
         }
         else
         {

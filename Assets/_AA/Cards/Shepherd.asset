@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a21341a03ae115d429006894fb24ce6b, type: 3}
+  m_Name: Shepherd
+  m_EditorClassIdentifier: Assembly-CSharp::CardSO
+  <Title>k__BackingField: Shepherd
+  <Suggestion>k__BackingField: Your Majesty, let me fetch the silverleaf that grows
+    where dawn first touches.
+  <ArtWork>k__BackingField: {fileID: 6768309445955883740, guid: e26b45e2dc15efa48ad15da1b80846a1, type: 3}
+  rightChoice:
+    effects: []
+  leftChoice:
+    effects: []
+  downChoice:
+    effects: []

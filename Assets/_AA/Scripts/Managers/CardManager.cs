@@ -6,20 +6,22 @@ public class CardManager : MonoBehaviour
     [SerializeField] private List<CardSO> cardDatas;
     [SerializeField] private GameObject _cardPrefab;
     [SerializeField] private RectTransform _cardPanel;
-
-    private void Awake()
-    {
-        GenerateCard();
-    }
-
     private void OnEnable()
     {
         GameEvents.CardSwiped += OnCardSwiped;
+        GameEvents.GameStarted += OnGameStarted;
+    }
+
+    private void OnGameStarted()
+    {
+        GenerateCard();
     }
 
     private void OnDisable()
     {
         GameEvents.CardSwiped -= OnCardSwiped;
+        GameEvents.GameStarted -= OnGameStarted;
+
     }
 
     private void OnCardSwiped(SwipeDirection direction, CardSO sO)
