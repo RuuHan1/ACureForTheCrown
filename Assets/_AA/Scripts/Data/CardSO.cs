@@ -9,14 +9,14 @@ public class CardSO : ScriptableObject
     [field: SerializeField] public string Title { get; private set; }
     [field: SerializeField] public string Suggestion { get; private set; }
     [field: SerializeField] public Sprite ArtWork { get; private set; }
-
+    //[SerializeField] private int gold;
 
     [Header("Choices")]
     [SerializeField] private SwipeChoice rightChoice;
     [SerializeField] private SwipeChoice leftChoice;
     [SerializeField] private SwipeChoice downChoice;
 
-
+    //public int PriceOffer => gold;
     public SwipeChoice LeftChoice => leftChoice;
     public SwipeChoice RightChoice => rightChoice;
 
