@@ -10,6 +10,7 @@ public static class GameEvents
     public static Action<StatType, float> StatChanged;
     public static Action ImprisonButtonClicked;
     public static Action GameStarted;
+    public static Action<int> CancerStageChanged; 
 
 
 }

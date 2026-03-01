@@ -11,7 +11,7 @@ public class Card : MonoBehaviour
     [SerializeField] private Image _fgImage;
     [SerializeField] private TMP_Text _titleText;
     [SerializeField] private TMP_Text _suggestionText;
-    private TMP_Text _priceText;
+    [SerializeField] private TMP_Text _priceText;
 
     public void Setup(CardSO cardData)
     {
@@ -24,7 +24,7 @@ public class Card : MonoBehaviour
         {
             if (effect.Stat == StatType.Wealth)
             {
-                _priceText.text =( effect.Amount *10).ToString();
+                _priceText.text = ($"Cost: {effect.Amount*10} gold");
                 break; // İlgili stat bulunduktan sonra döngüye devam etmeye gerek yok
             }
         }
