@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     [Header("Audio Sources")]
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource punishmentSource;
 
     [Header("Background Music")]
     [SerializeField] private AudioClip backgroundMusic;
@@ -16,6 +17,8 @@ public class AudioManager : MonoBehaviour
     [Header("Game Sound Effects (SFX)")]
     public AudioClip swipeSound; // Artik tek bir kaydirma sesimiz var
 
+    [Header("Punishemnt Sound Effects")]
+    public AudioClip imprisonSound; // Hapse atma sesi
     private void Awake()
     {
         // Singleton Kurulumu
@@ -84,5 +87,11 @@ public class AudioManager : MonoBehaviour
 
         // PlayOneShot, ayni anda gelen seslerin birbirini kesmeden ust uste calmasini saglar.
         sfxSource.PlayOneShot(clip);
+    }
+
+    public void PlayPunishmentSFX(AudioClip clip)
+    {
+        if (clip == null) return;
+        punishmentSource.PlayOneShot(clip);
     }
 }

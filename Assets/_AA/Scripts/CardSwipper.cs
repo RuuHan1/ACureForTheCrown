@@ -22,7 +22,9 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     [SerializeField] private float flyOffDistance = 1000f;
 
     [Header("Idle Floating Animation")]
+    [Tooltip("Kart bosta dururken ne kadar asagi inip cikacak")]
     [SerializeField] private float idleFloatAmount = 15f;
+    [Tooltip("Bir asagi-yukari salinim ne kadar surecek")]
     [SerializeField] private float idleFloatDuration = 1.5f;
 
     private bool _isAnimating = false;
@@ -39,7 +41,7 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         GameEvents.GameOver += OnGameOver;
 
-        // YENI: Butondan gelen Hapse At sinyalini dinlemeye basla
+        // Butondan gelen Hapse At sinyalini dinlemeye basla
         GameEvents.ImprisonButtonClicked += OnImprisonButtonClicked;
     }
 
@@ -49,7 +51,7 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         GameEvents.ImprisonButtonClicked -= OnImprisonButtonClicked;
     }
 
-    // YENI: Butona basildigi sinyali gelince tetiklenen metot
+    // Butona basildigi sinyali gelince tetiklenen metot
     private void OnImprisonButtonClicked()
     {
         // Eger kart zaten baska bir yere firlatiliyorsa cakisip bug olmamasi icin iptal et
@@ -176,7 +178,9 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private void SwipeDown()
     {
         _isAnimating = true;
-        PlaySwipeSound();
+
+        // DEĞİŞTİRİLDİ: Standart kaydirma sesi yerine hapse atma sesini caliyoruz
+        PlayImprisonSound();
 
         Debug.Log("Card Imprisoned via Button! (Karakter butona basilarak hapse atildi)");
 
@@ -195,6 +199,15 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.PlaySFX(AudioManager.Instance.swipeSound, true);
+        }
+    }
+
+    // YENI EKLENDI: Sadece hapse atma (Imprison) eylemi icin ozel ses metodu
+    private void PlayImprisonSound()
+    {
+        if (AudioManager.Instance != null && AudioManager.Instance.imprisonSound != null)
+        {
+            AudioManager.Instance.PlayPunishmentSFX(AudioManager.Instance.imprisonSound);
         }
     }
 }
