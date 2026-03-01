@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Guardian 1
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Guardian
-  <Suggestion>k__BackingField: Your Majesty, grant me leave to seek the ancient hermit
-    beyond the northern cliffs. They say no ailment withstands his wisdom.
+  <Suggestion>k__BackingField: Your Majesty, allow me to seek the old hermit beyond
+    the northern cliffs.
   <ArtWork>k__BackingField: {fileID: 7607910846721936991, guid: 7666d0407b86e7f4c8b54a76a3f00989, type: 3}
   rightChoice:
     effects:

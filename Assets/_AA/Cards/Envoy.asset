@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Envoy
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Envoy
-  <Suggestion>k__BackingField: Your Majesty, the royal hot springs may cleanse the
-    Princess of her affliction.
+  <Suggestion>k__BackingField: Your Majesty, the royal hot springs may help cleanse
+    her illness
   <ArtWork>k__BackingField: {fileID: 5837964790920026306, guid: e8de775acfcef4347b08a9d79945c875, type: 3}
   rightChoice:
     effects:

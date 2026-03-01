@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Librarian
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Librarian
-  <Suggestion>k__BackingField: Your Majesty, the cure lies forgotten in ancient tomes
-    , grant me time to find it.
+  <Suggestion>k__BackingField: "Your Majesty, the cure may be hidden in old books
+    \u2014 give me time to search. "
   <ArtWork>k__BackingField: {fileID: -4358630521960076285, guid: 41dabb9fffed70241a26c6c425e17900, type: 3}
   rightChoice:
     effects:

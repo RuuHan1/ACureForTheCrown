@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Vendor
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Vendor
-  <Suggestion>k__BackingField: "Your Majesty, I\u2019ll send ships for every rare
-    cure  gold will bring it home."
+  <Suggestion>k__BackingField: Your Majesty, in distant lands, I witnessed a ritual
+    said to cure the incurable.
   <ArtWork>k__BackingField: {fileID: 617276170363302055, guid: a7572dde85933ad42ba21b956a4b6253, type: 3}
   rightChoice:
     effects:

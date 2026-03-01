@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Guardian
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Guardian
-  <Suggestion>k__BackingField: Your Majesty, the castle must be sealed. No unseen
-    poison or curse shall pass our gates.
+  <Suggestion>k__BackingField: Your Majesty, we must seal the castle so no poison
+    or curse can enter.
   <ArtWork>k__BackingField: {fileID: 7607910846721936991, guid: 7666d0407b86e7f4c8b54a76a3f00989, type: 3}
   rightChoice:
     effects:

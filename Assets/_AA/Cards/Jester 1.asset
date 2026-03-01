@@ -10,23 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a21341a03ae115d429006894fb24ce6b, type: 3}
-  m_Name: Alchemist
+  m_Name: Jester 1
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
-  <Title>k__BackingField: Alchemist
-  <Suggestion>k__BackingField: Your Majesty, I can make a potion from rare silver
-    and phoenix ash.
-  <ArtWork>k__BackingField: {fileID: -2674004897575637331, guid: a5e647d3847a93f498533fce53a29184, type: 3}
+  <Title>k__BackingField: Jester
+  <Suggestion>k__BackingField: Your Majesty, perhaps if you admit you do not know
+    everything, the illness will grow embarrassed and leave on its own.
+  <ArtWork>k__BackingField: {fileID: 7647298288565211277, guid: ba7538151b097ff46ba64f0110b552c0, type: 3}
   rightChoice:
     effects:
     - Stat: 0
-      Amount: -2
-    - Stat: 2
+      Amount: 1
+    - Stat: 4
       Amount: -3
   leftChoice:
     effects:
-    - Stat: 1
+    - Stat: 4
+      Amount: 1
+    - Stat: 0
       Amount: -1
   downChoice:
     effects:
     - Stat: 4
-      Amount: -1
+      Amount: 3
+    - Stat: 3
+      Amount: 1
