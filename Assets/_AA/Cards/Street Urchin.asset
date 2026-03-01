@@ -12,12 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21341a03ae115d429006894fb24ce6b, type: 3}
   m_Name: Street Urchin
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
-  <Title>k__BackingField: 
-  <Suggestion>k__BackingField: 
-  <ArtWork>k__BackingField: {fileID: 0}
+  <Title>k__BackingField: Street Urchin
+  <Suggestion>k__BackingField: "Your Majesty, my grandmother\u2019s healing soup
+    might help your daughter recover."
+  <ArtWork>k__BackingField: {fileID: -2899405635364999957, guid: e8f394adb94b1a24689b01dca1363d6e, type: 3}
   rightChoice:
-    effects: []
+    effects:
+    - Stat: 1
+      Amount: 2
+    - Stat: 2
+      Amount: 1
+    - Stat: 4
+      Amount: 1
   leftChoice:
-    effects: []
+    effects:
+    - Stat: 0
+      Amount: -1
   downChoice:
-    effects: []
+    effects:
+    - Stat: 0
+      Amount: 1
+    - Stat: 4
+      Amount: -1

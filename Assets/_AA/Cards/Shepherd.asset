@@ -16,11 +16,10 @@ MonoBehaviour:
   <Suggestion>k__BackingField: Your Majesty, let me fetch the silverleaf that grows
     where dawn first touches.
   <ArtWork>k__BackingField: {fileID: 21300000, guid: e26b45e2dc15efa48ad15da1b80846a1, type: 3}
-  gold: 0
   rightChoice:
     effects:
     - Stat: 0
-      Amount: -1
+      Amount: -2
     - Stat: 2
       Amount: 2
   leftChoice:
