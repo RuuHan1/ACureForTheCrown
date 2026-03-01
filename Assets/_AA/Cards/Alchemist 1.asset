@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Alchemist 1
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Alchemist
-  <Suggestion>k__BackingField: Your Majesty, I will bind sunlight essence with liquid
-    gold to forge a restorative tonic.
+  <Suggestion>k__BackingField: 'Your Majesty, I will mix sunlight essence and gold
+    to create a healing drink. '
   <ArtWork>k__BackingField: {fileID: -2674004897575637331, guid: a5e647d3847a93f498533fce53a29184, type: 3}
   rightChoice:
     effects:

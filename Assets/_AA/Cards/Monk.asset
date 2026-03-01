@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Monk
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Monk
-  <Suggestion>k__BackingField: My King, through prayer and fasting, the body may
-    regain its divine balance.
+  <Suggestion>k__BackingField: 'My King, through prayer and fasting, her body may
+    recover its balance. '
   <ArtWork>k__BackingField: {fileID: 4942789374701161761, guid: 964843ce21b7056469b36ead831ae5d6, type: 3}
   rightChoice:
     effects:

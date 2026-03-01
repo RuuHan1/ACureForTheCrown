@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Street Urchin
   <Suggestion>k__BackingField: "Your Majesty, my grandmother\u2019s healing soup
-    might help your daughter recover."
+    could help her recover. "
   <ArtWork>k__BackingField: {fileID: -2899405635364999957, guid: e8f394adb94b1a24689b01dca1363d6e, type: 3}
   rightChoice:
     effects:

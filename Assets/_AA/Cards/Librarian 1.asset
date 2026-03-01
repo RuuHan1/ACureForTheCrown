@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Librarian 1
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Librarian
-  <Suggestion>k__BackingField: Your Majesty, I shall scour forbidden manuscripts
-    for a lost healing art.
+  <Suggestion>k__BackingField: 'Your Majesty, I will study forbidden texts for a
+    lost remedy. '
   <ArtWork>k__BackingField: {fileID: -4358630521960076285, guid: 41dabb9fffed70241a26c6c425e17900, type: 3}
   rightChoice:
     effects:

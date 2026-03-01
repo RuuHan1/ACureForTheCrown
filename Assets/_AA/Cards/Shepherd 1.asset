@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Shepherd 1
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Shepherd
-  <Suggestion>k__BackingField: Your Majesty, in the high pastures blooms a flower
-    that defies decay.
+  <Suggestion>k__BackingField: 'Your Majesty, a special flower in the high pastures
+    may help her heal. '
   <ArtWork>k__BackingField: {fileID: 21300000, guid: e26b45e2dc15efa48ad15da1b80846a1, type: 3}
   rightChoice:
     effects:

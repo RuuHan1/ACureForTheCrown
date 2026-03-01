@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Shepherd
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Shepherd
-  <Suggestion>k__BackingField: Your Majesty, let me fetch the silverleaf that grows
-    where dawn first touches.
+  <Suggestion>k__BackingField: 'Your Majesty, I will bring a rare herb that grows
+    at dawn. '
   <ArtWork>k__BackingField: {fileID: 21300000, guid: e26b45e2dc15efa48ad15da1b80846a1, type: 3}
   rightChoice:
     effects:
