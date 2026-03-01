@@ -67,7 +67,8 @@ public class CardSwipper : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         transform.DOKill();
     }
 
-    private void OnGameOver(bool isWin)
+    // HATA ÇÖZÜLDÜ: Artik 'string message' parametresini de aliyor (kullanmasak bile imzasi uymak zorunda)
+    private void OnGameOver(bool isWin, string message)
     {
         _isAnimating = true;
         transform.DOKill();
