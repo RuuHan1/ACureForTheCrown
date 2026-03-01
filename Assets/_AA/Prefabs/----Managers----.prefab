@@ -101,16 +101,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316598749278671027}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.17947745, w: 0.9837621}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.832156, y: 0.832156, z: 0.832156}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6753148665511661266}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -20}
+  m_Father: {fileID: 605997495627391282}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20.679}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 126.6, y: 48.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &3707661914831118091
@@ -141,7 +141,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: '100
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fc61fb31d31ec4a4ca741fe4d3490c56, type: 2}
   m_sharedMaterial: {fileID: -4484481577996487266, guid: fc61fb31d31ec4a4ca741fe4d3490c56, type: 2}
@@ -150,8 +152,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4281966010
+  m_fontColor: {r: 0.7283019, g: 0.61602044, b: 0.22398713, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3412,6 +3414,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3860047670126423002}
   - {fileID: 1727772660584713986}
   - {fileID: 8431557919875674956}
   m_Father: {fileID: 5008901337851779091}
@@ -3573,7 +3576,6 @@ RectTransform:
   - {fileID: 5820021608622546488}
   - {fileID: 6594018831584097356}
   - {fileID: 2871889341655964783}
-  - {fileID: 3860047670126423002}
   m_Father: {fileID: 6896108393781803641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5029,7 +5031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2871889341655964783
 RectTransform:
   m_ObjectHideFlags: 0
