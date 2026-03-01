@@ -22,6 +22,8 @@ public class UIManager : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] private Button _restartButton;
     [SerializeField] private Button _imprisonButton;
+    [SerializeField] private Button _startButton;
+    [SerializeField] private Image _guidePanel;
 
     // PERFORMAS TAVSİYESİ (Caching)
     private Image _infoImageComponent;
@@ -32,6 +34,11 @@ public class UIManager : MonoBehaviour
         if (_restartButton != null)
         {
             _restartButton.onClick.AddListener(RestartGame);
+        }
+        
+        if(_startButton != null)
+        {
+            _startButton.onClick.AddListener(DestroyGuidePanel);
         }
 
         // Imprison butonunu GameEvents sinyaline bagliyoruz
@@ -119,5 +126,10 @@ public class UIManager : MonoBehaviour
     {
         DOTween.KillAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void DestroyGuidePanel()
+    {
+        _guidePanel.gameObject.SetActive(false);
     }
 }

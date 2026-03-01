@@ -315,8 +315,36 @@ PrefabInstance:
       value: 0.15471691
       objectReference: {fileID: 0}
     - target: {fileID: 1764108481487440063, guid: 6020c87df7eff1f45a592561e4868887, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 67.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764108481487440063, guid: 6020c87df7eff1f45a592561e4868887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 88.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1764108481487440063, guid: 6020c87df7eff1f45a592561e4868887, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066426392906074302, guid: 6020c87df7eff1f45a592561e4868887, type: 3}
+      propertyPath: m_fontSize
+      value: 26.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066426392906074302, guid: 6020c87df7eff1f45a592561e4868887, type: 3}
+      propertyPath: m_margin.x
+      value: 8.340652
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066426392906074302, guid: 6020c87df7eff1f45a592561e4868887, type: 3}
+      propertyPath: m_margin.z
+      value: 13.7736435
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678857005520707702, guid: 6020c87df7eff1f45a592561e4868887, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678857005520707702, guid: 6020c87df7eff1f45a592561e4868887, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 159.5
       objectReference: {fileID: 0}
     - target: {fileID: 5678857005520707702, guid: 6020c87df7eff1f45a592561e4868887, type: 3}
       propertyPath: m_LocalScale.x
