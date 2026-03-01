@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: a5e647d3847a93f498533fce53a29184
+guid: eebe25db0cbb7b946b99da810f6ce1bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2674004897575637331
-    second: "simyac\u0131_0"
+      213: 7218306778026679438
+    second: "sand\u0131k_0"
+  - first:
+      213: -6420329830039852395
+    second: "sand\u0131k_1"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "simyac\u0131_0"
+      name: "sand\u0131k_0"
       rect:
         serializedVersion: 2
-        x: 127
-        y: 17
-        width: 240
-        height: 405
+        x: 17
+        y: 59
+        width: 263
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +157,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dae695096b604ead0800000000000000
-      internalID: -2674004897575637331
+      spriteID: e8c131835c39c2460800000000000000
+      internalID: 7218306778026679438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "sand\u0131k_1"
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 55
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a61a3390866e6a0800000000000000
+      internalID: -6420329830039852395
       vertices: []
       indices: 
       edges: []
@@ -164,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "simyac\u0131_0": -2674004897575637331
+      "sand\u0131k_0": 7218306778026679438
+      "sand\u0131k_1": -6420329830039852395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

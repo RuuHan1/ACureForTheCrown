@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 // SADECE GÖRSELLİĞİ YÖNETEN SINIF (Clean Code - View)
-// Artik burada matematik veya GameOver mantigi YOK. Tamamen arindirdik.
+// Artik burada matematik veya GameOver mantigi YOK. Tamamen arindirdik. 
 public class BarUI : MonoBehaviour
 {
     public StatType statType;

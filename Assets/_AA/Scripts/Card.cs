@@ -16,7 +16,7 @@ public class Card : MonoBehaviour
     public void Setup(CardSO cardData)
     {
         this.cardData = cardData;
-        //_fgImage.sprite = cardData.ArtWork;
+        _fgImage.sprite = cardData.ArtWork;
         _titleText.text = cardData.Title;
         _suggestionText.text = cardData.Suggestion;
     

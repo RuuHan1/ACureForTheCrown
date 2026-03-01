@@ -10,24 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a21341a03ae115d429006894fb24ce6b, type: 3}
-  m_Name: GrandMa
+  m_Name: Guardian
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
-  <Title>k__BackingField: Grandma
-  <Suggestion>k__BackingField: 'you must give her a rat''s tail. '
-  <ArtWork>k__BackingField: {fileID: 0}
+  <Title>k__BackingField: Guardian
+  <Suggestion>k__BackingField: Your Majesty, the castle must be sealed. No unseen
+    poison or curse shall pass our gates.
+  <ArtWork>k__BackingField: {fileID: 7607910846721936991, guid: 7666d0407b86e7f4c8b54a76a3f00989, type: 3}
   rightChoice:
     effects:
-    - Stat: 0
-      Amount: 0
     - Stat: 1
-      Amount: -2
-    - Stat: 2
+      Amount: -1
+    - Stat: 3
+      Amount: -1
+    - Stat: 4
       Amount: 0
   leftChoice:
     effects:
-    - Stat: 0
+    - Stat: 3
       Amount: 1
-    - Stat: 1
-      Amount: 2
-    - Stat: 2
-      Amount: 0
+    - Stat: 4
+      Amount: 1
+  downChoice:
+    effects:
+    - Stat: 4
+      Amount: -1
