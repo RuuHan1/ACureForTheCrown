@@ -31,13 +31,9 @@ MonoBehaviour:
   leftChoice:
     effects:
     - Stat: 0
-      Amount: 0
+      Amount: 1
     - Stat: 1
       Amount: -1
-    - Stat: 2
-      Amount: 0
-    - Stat: 3
-      Amount: 0
     - Stat: 4
       Amount: -1
   downChoice:

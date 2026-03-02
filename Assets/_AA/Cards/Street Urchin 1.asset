@@ -10,31 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a21341a03ae115d429006894fb24ce6b, type: 3}
-  m_Name: Witcher
+  m_Name: Street Urchin 1
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
-  <Title>k__BackingField: Witcher
-  <Suggestion>k__BackingField: "Your Majesty, I can hunt the leshen in the northern
-    woods \u2014 its mutagenic extract may strengthen her body."
-  <ArtWork>k__BackingField: {fileID: 7742747498303896139, guid: 0dac449cdd35b604abab130cf12efe27, type: 3}
+  <Title>k__BackingField: Street Urchin
+  <Suggestion>k__BackingField: "Majesty, let me offer the harvest from my fields\u2014the
+    fruits and vegetables we have grown\u2014for your table."
+  <ArtWork>k__BackingField: {fileID: -2899405635364999957, guid: e8f394adb94b1a24689b01dca1363d6e, type: 3}
   rightChoice:
     effects:
-    - Stat: 0
-      Amount: -3
     - Stat: 1
-      Amount: -2
+      Amount: 2
     - Stat: 2
-      Amount: -3
-    - Stat: 3
-      Amount: -3
+      Amount: 3
+    - Stat: 4
+      Amount: 1
   leftChoice:
     effects:
     - Stat: 0
       Amount: 1
+    - Stat: 4
+      Amount: -1
   downChoice:
     effects:
     - Stat: 0
       Amount: 1
-    - Stat: 3
-      Amount: -3
     - Stat: 4
-      Amount: -3
+      Amount: -1
+    - Stat: 3
+      Amount: -1

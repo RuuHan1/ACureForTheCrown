@@ -13,22 +13,25 @@ MonoBehaviour:
   m_Name: Monk 1
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Monk
-  <Suggestion>k__BackingField: My King, allow me to guide her through meditation
-    and inner peace, for a calm spirit can strengthen a weak body.
+  <Suggestion>k__BackingField: "My King, permit her to partake in the order\u2019s
+    sacred water rite, for in its depths the faithful are cleansed, and their spirits
+    bound ever closer to the covenant."
   <ArtWork>k__BackingField: {fileID: 4942789374701161761, guid: 964843ce21b7056469b36ead831ae5d6, type: 3}
   rightChoice:
     effects:
     - Stat: 1
-      Amount: 1
+      Amount: 2
   leftChoice:
     effects:
     - Stat: 1
       Amount: -1
     - Stat: 0
-      Amount: -1
+      Amount: 1
   downChoice:
     effects:
     - Stat: 4
       Amount: -1
     - Stat: 3
       Amount: 3
+    - Stat: 0
+      Amount: 1

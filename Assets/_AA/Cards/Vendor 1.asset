@@ -19,7 +19,7 @@ MonoBehaviour:
   rightChoice:
     effects:
     - Stat: 3
-      Amount: -1
+      Amount: -2
     - Stat: 2
       Amount: 2
     - Stat: 2
@@ -27,10 +27,12 @@ MonoBehaviour:
   leftChoice:
     effects:
     - Stat: 0
-      Amount: -1
+      Amount: 1
   downChoice:
     effects:
     - Stat: 3
       Amount: -2
     - Stat: 4
       Amount: -1
+    - Stat: 0
+      Amount: 1

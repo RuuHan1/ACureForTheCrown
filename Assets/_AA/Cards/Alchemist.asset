@@ -22,10 +22,14 @@ MonoBehaviour:
       Amount: -2
     - Stat: 2
       Amount: -3
+    - Stat: 1
+      Amount: -1
   leftChoice:
     effects:
     - Stat: 1
       Amount: -1
+    - Stat: 0
+      Amount: 1
   downChoice:
     effects:
     - Stat: 4

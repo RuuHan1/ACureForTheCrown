@@ -27,7 +27,7 @@ MonoBehaviour:
   leftChoice:
     effects:
     - Stat: 0
-      Amount: -1
+      Amount: 1
   downChoice:
     effects:
     - Stat: 0

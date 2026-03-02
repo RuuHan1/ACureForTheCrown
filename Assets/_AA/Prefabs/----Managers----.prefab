@@ -5295,19 +5295,29 @@ MonoBehaviour:
   cardDatas:
   - {fileID: 11400000, guid: 39521dbd14a062140a722328b9884087, type: 2}
   - {fileID: 11400000, guid: 4003c4d3247a7dd41adb1c04ee33ef4d, type: 2}
+  - {fileID: 11400000, guid: 82c0d655f3101554d8db6ccc03b54b1b, type: 2}
   - {fileID: 11400000, guid: 73fa4434fce402f459557e12cfe22aaf, type: 2}
+  - {fileID: 11400000, guid: ee7c68a06820bd248979a5a8536b3951, type: 2}
   - {fileID: 11400000, guid: 2ebe3fcfe57b06d4690b7d5ecb31ba64, type: 2}
   - {fileID: 11400000, guid: 8f7248de111aa6a4ea4f2b7fcd8db2ce, type: 2}
   - {fileID: 11400000, guid: 831e82e20a7ab794695f22bb5cd4aa87, type: 2}
+  - {fileID: 11400000, guid: 95ccf4f06a8966c47a6bb733331ae9d2, type: 2}
   - {fileID: 11400000, guid: 028e557b7e73f714bae2b2fd1bcb544b, type: 2}
   - {fileID: 11400000, guid: 19c09fc5f29aaf84cb56b20010560120, type: 2}
   - {fileID: 11400000, guid: 8b149a9cc782253458e5c18e016d9ffb, type: 2}
+  - {fileID: 11400000, guid: fb72dbf35e8680e468c9ee75d7d5757e, type: 2}
   - {fileID: 11400000, guid: 63e4b1feb7f699247ad5729316282552, type: 2}
   - {fileID: 11400000, guid: e132a85dee8d5b249968ec762297b0ef, type: 2}
+  - {fileID: 11400000, guid: 3fa2c92043d097e46b9d3043c8671c09, type: 2}
   - {fileID: 11400000, guid: 1929f114a792ce14a89c9216dc4f0cdb, type: 2}
+  - {fileID: 11400000, guid: 9f55837215cd5b446bc0f2b57b8bb38b, type: 2}
+  - {fileID: 11400000, guid: 08de45ba5fc395a428f47bb9718ab0e4, type: 2}
+  - {fileID: 11400000, guid: 3d8d8c700c86c3b4eb00a65c655e1f49, type: 2}
   - {fileID: 11400000, guid: 53713e0d57c25f649b0057ce8d898d53, type: 2}
   - {fileID: 11400000, guid: 9b9d90639fa9ec54294d17f3e8da29f6, type: 2}
   - {fileID: 11400000, guid: de6e3c103a0e80544b8dd6d04aff05e9, type: 2}
+  - {fileID: 11400000, guid: b760ec9713c05254181cbcd336bd6294, type: 2}
+  - {fileID: 11400000, guid: 6f7013189f804cf429ccbb564898b58a, type: 2}
   _cardPrefab: {fileID: 3479196642493762653, guid: cd8a20dc1d0a36e40be94353273f4870, type: 3}
   _cardPanel: {fileID: 5616017321568278316}
 --- !u!1 &9083262357877618735

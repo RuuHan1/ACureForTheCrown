@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Traveler 1
   m_EditorClassIdentifier: Assembly-CSharp::CardSO
   <Title>k__BackingField: Traveler
-  <Suggestion>k__BackingField: 'Your Majesty, I have seen a temple where the sick
-    are healed. '
+  <Suggestion>k__BackingField: Your Majesty, I have crossed distant lands and beheld
+    a sanctuary where even the frail rise renewed.
   <ArtWork>k__BackingField: {fileID: 807228877658405035, guid: 879f993660ac57348b28661ed7f72b3b, type: 3}
   rightChoice:
     effects:

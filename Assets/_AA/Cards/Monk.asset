@@ -26,7 +26,11 @@ MonoBehaviour:
     effects:
     - Stat: 1
       Amount: -1
+    - Stat: 0
+      Amount: 1
   downChoice:
     effects:
     - Stat: 4
       Amount: -1
+    - Stat: 0
+      Amount: 1
