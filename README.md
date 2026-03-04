@@ -1,6 +1,6 @@
 # ACureForTheCrown
 
-**Royal Cure**, "Cell" temalı bir Game Jam için geliştirilmiş bir kaynak yönetimi ve karar verme oyunudur. Tema iki farklı açıdan ele alınmıştır: biyolojik hücreler (**Kanser**) ve hapishane hücreleri (**Zindan**).
+**A Cure For The Crown**, "Cell" temalı bir Game Jam için geliştirilmiş bir kaynak yönetimi ve karar verme oyunudur. Tema iki farklı açıdan ele alınmıştır: biyolojik hücreler (**Kanser**) ve hapishane hücreleri (**Zindan**).
 
 ---
 
