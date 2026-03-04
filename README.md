@@ -1,43 +1,42 @@
 # ACureForTheCrown
 
-This project is a resource management and decision-making game developed for a game jam with the theme "Cell". The theme is interpreted through two lenses: biological cells (cancer) and carceral cells (prison).
+**Royal Cure**, "Cell" temalı bir Game Jam için geliştirilmiş bir kaynak yönetimi ve karar verme oyunudur. Tema iki farklı açıdan ele alınmıştır: biyolojik hücreler (**Kanser**) ve hapishane hücreleri (**Zindan**).
 
-#Concept and Story The player takes on the role of a King whose daughter is suffering from an incurable form of cancer. To find a cure, the King invites subjects and specialists to propose treatments. The core objective is to manage the kingdom's resources effectively while attempting to reduce the daughter's cancer progression to zero.
+---
 
-#Gameplay Mechanics The game utilizes card-based interaction mechanics, where players evaluate proposals from various characters (e.g., Alchemists, Witchers, Doctors).
+## 📖 Hikaye ve Konsept
+Oyuncu, kızı tedavisi olmayan bir kanser türüne yakalanmış bir Kralın rolünü üstlenir. Bir çözüm bulmak için Kral, halkını ve uzmanları (Simyacılar, Witcher'lar, Doktorlar) tedavi önerileri sunmaya davet eder. Temel amaç, krallığın kaynaklarını etkili bir şekilde yönetirken kızının kanser barını %0'a düşürmektir.
 
-#Decision Options Swipe Right (Accept): Implement the proposed solution. This typically consumes gold/resources but may affect health bars.
+## 🎮 Oynanış Mekanikleri
+Oyun, karakterlerden gelen teklifleri değerlendirdiğiniz kart tabanlı bir etkileşim sistemine sahiptir.
 
-Swipe Left (Reject): Decline the proposal. This usually preserves resources but may have social or health consequences.
+### Karar Seçenekleri
+* **Sağa Kaydır (Kabul Et):** Önerilen çözümü uygular. Genellikle altın tüketir ancak sağlık barlarını iyileştirebilir.
+* **Sola Kaydır (Reddet):** Teklifi geri çevirir. Kaynakları korur ancak sosyal veya sağlık açısından olumsuz sonuçları olabilir.
+* **Hapse At (Imprison):** Teklif sunan kişiyi zindana gönderir. Eğer teklif Kraliyetle dalga geçiyorsa veya tehlikeliyse, ekonomiyi ve onuru korumak için kişiyi "hücreye" kapatma mekanizmasıdır.
 
-Imprison: Send the proposer to the dungeon. This is a unique mechanic where the player "cells" the individual to protect the economy or honor if the proposal is deemed mocking or dangerous.
+---
 
-#Resource Management The player must balance five primary indicators:
+## 📊 Kaynak Yönetimi
+Oyuncunun dengelemesi gereken beş ana gösterge vardır:
 
-Cancer (Target): The main objective is to drive this bar to 0%.
+1.  **Cancer (Hedef):** Ana amaç bu barı %0'a indirmektir.
+2.  **Mental:** Kızın veya kraliyet ailesinin psikolojik durumu.
+3.  **Immune:** Kızın biyolojik direnci.
+4.  **Resources (Altın):** Krallığın hazinesi.
+5.  **Honor:** Halkın Kral hakkındaki algısı ve moral değerleri.
 
-Mental: The psychological state of the daughter or the royal family.
+---
 
-Immune: The biological resilience of the daughter.
+## 🛠️ Teknik Detaylar
+* **Motor:** Unity
+* **Dil:** C#
+* **Platform:** PC / WebGL
+* **Görsel Stil:** 2D El çizimi ve Pixel Art karışımı UI.
 
-Resources (Gold): The financial treasury of the kingdom.
-
-Honor: The public perception and moral standing of the Crown.
-
-#Technical Details Engine: Unity
-
-Language: C#
-
-Platform: PC / WebGL
-
-Visual Style: 2D Hand-drawn / Pixel Art hybrid UI.
-
-How to Play Read the character's dialogue and the associated cost/benefit.
-
-Choose one of the three actions (Accept, Reject, Imprison).
-
-Monitor the impact on the five resource bars.
-
-Game ends if resources are depleted or if the King's honor is ruined.
-
-Victory is achieved by successfully curing the daughter (Cancer bar = 0).
+## 🕹️ Nasıl Oynanır?
+1. Karakterin diyaloğunu ve getireceği maliyet/fayda oranını okuyun.
+2. Üç eylemden birini seçin: **Kabul Et, Reddet veya Hapse At.**
+3. Beş kaynak barı üzerindeki etkileri izleyin.
+4. Kaynaklar biterse veya Onur barı sıfırlanırsa oyun kaybedilir.
+5. Kanser barı %0'a ulaştığında kız iyileşir ve oyun kazanılır.
