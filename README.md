@@ -1,20 +1,20 @@
 # PetriTheGame
 This project is a resource management and decision-making game developed for a game jam with the theme "Cell". The theme is interpreted through two lenses: biological cells (cancer) and carceral cells (prison).
 
-Concept and Story
+#Concept and Story
 The player takes on the role of a King whose daughter is suffering from an incurable form of cancer. To find a cure, the King invites subjects and specialists to propose treatments. The core objective is to manage the kingdom's resources effectively while attempting to reduce the daughter's cancer progression to zero.
 
-Gameplay Mechanics
+#Gameplay Mechanics
 The game utilizes card-based interaction mechanics, where players evaluate proposals from various characters (e.g., Alchemists, Witchers, Doctors).
 
-Decision Options
+#Decision Options
 Swipe Right (Accept): Implement the proposed solution. This typically consumes gold/resources but may affect health bars.
 
 Swipe Left (Reject): Decline the proposal. This usually preserves resources but may have social or health consequences.
 
 Imprison: Send the proposer to the dungeon. This is a unique mechanic where the player "cells" the individual to protect the economy or honor if the proposal is deemed mocking or dangerous.
 
-Resource Management
+#Resource Management
 The player must balance five primary indicators:
 
 Cancer (Target): The main objective is to drive this bar to 0%.
@@ -27,7 +27,7 @@ Resources (Gold): The financial treasury of the kingdom.
 
 Honor: The public perception and moral standing of the Crown.
 
-Technical Details
+#Technical Details
 Engine: Unity
 
 Language: C#
