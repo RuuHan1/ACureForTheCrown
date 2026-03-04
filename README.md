@@ -32,7 +32,7 @@ Oyuncunun dengelemesi gereken beş ana gösterge vardır:
 * **Motor:** Unity
 * **Dil:** C#
 * **Platform:** PC / WebGL
-* **Görsel Stil:** 2D El çizimi ve Pixel Art karışımı UI.
+* **Görsel Stil:** 2D El çizimi.
 
 ## 🕹️ Nasıl Oynanır?
 1. Karakterin diyaloğunu ve getireceği maliyet/fayda oranını okuyun.
