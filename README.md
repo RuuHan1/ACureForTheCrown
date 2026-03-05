@@ -11,7 +11,7 @@ Oyuncu, kızı tedavisi olmayan bir kanser türüne yakalanmış bir Kralın rol
 ## 🎮 Oynanış Mekanikleri
 Oyun, karakterlerden gelen teklifleri değerlendirdiğiniz kart tabanlı bir etkileşim sistemine sahiptir.
 ## 🎥 Gameplay Video
-[![Watch the gameplay video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://youtu.be/ozzGt9e8uBc?si=Q-PI27GsJ0IrbKD_)
+[![Royal Cure Gameplay](https://img.youtube.com/vi/ozzGt9e8uBc/maxresdefault.jpg)](https://youtu.be/ozzGt9e8uBc)
 ### Karar Seçenekleri
 * **Sağa Kaydır (Kabul Et):** Önerilen çözümü uygular. Genellikle altın tüketir ancak sağlık barlarını iyileştirebilir.
 * **Sola Kaydır (Reddet):** Teklifi geri çevirir. Kaynakları korur ancak sosyal veya sağlık açısından olumsuz sonuçları olabilir.
