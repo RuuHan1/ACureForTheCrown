@@ -1,6 +1,6 @@
 # ACureForTheCrown
 #[![Play on Itch.io](https://img.shields.io/badge/Play%20on-Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio)](https://ruhan07.itch.io/a-cure-for-the-crown)
-[![Watch the gameplay video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://youtu.be/ozzGt9e8uBc?si=Q-PI27GsJ0IrbKD_)
+
 **A Cure For The Crown**, "Cell" temalı bir Game Jam için geliştirilmiş bir kaynak yönetimi ve karar verme oyunudur. Tema iki farklı açıdan ele alınmıştır: biyolojik hücreler (**Kanser**) ve hapishane hücreleri (**Zindan**).
 
 ---
@@ -10,7 +10,8 @@ Oyuncu, kızı tedavisi olmayan bir kanser türüne yakalanmış bir Kralın rol
 
 ## 🎮 Oynanış Mekanikleri
 Oyun, karakterlerden gelen teklifleri değerlendirdiğiniz kart tabanlı bir etkileşim sistemine sahiptir.
-
+## 🎥 Gameplay Video
+[![Watch the gameplay video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://youtu.be/ozzGt9e8uBc?si=Q-PI27GsJ0IrbKD_)
 ### Karar Seçenekleri
 * **Sağa Kaydır (Kabul Et):** Önerilen çözümü uygular. Genellikle altın tüketir ancak sağlık barlarını iyileştirebilir.
 * **Sola Kaydır (Reddet):** Teklifi geri çevirir. Kaynakları korur ancak sosyal veya sağlık açısından olumsuz sonuçları olabilir.
