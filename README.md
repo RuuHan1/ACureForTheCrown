@@ -16,7 +16,6 @@ Oyun, karakterlerden gelen teklifleri değerlendirdiğiniz kart tabanlı bir etk
 
 | Giriş Ekranı | Karar Mekanizması ve Kaynak Yönetimi |
 | :---: | :---: |
-| :---: | :---: |
 | ![Gorsel 1](Screenshots/ss1.png) | ![Gorsel 2](Screenshots/ss2.png) 
 |![Gorsel 3](Screenshots/ss3.png) |![Gorsel 4](Screenshots/ss4.png) |
 ### Karar Seçenekleri
