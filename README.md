@@ -12,12 +12,18 @@ Oyuncu, kızı tedavisi olmayan bir kanser türüne yakalanmış bir Kralın rol
 Oyun, karakterlerden gelen teklifleri değerlendirdiğiniz kart tabanlı bir etkileşim sistemine sahiptir.
 ## 🎥 Gameplay Video
 [![Royal Cure Gameplay](https://img.youtube.com/vi/ozzGt9e8uBc/maxresdefault.jpg)](https://youtu.be/ozzGt9e8uBc)
+## 📸 Oynanış Görüntüleri
+
+| Giriş Ekranı | Karar Mekanizması ve Kaynak Yönetimi |
+| :---: | :---: |
+| ![Gorsel 1](Screenshots/ss1.png) | ![Gorsel 2](Screenshots/ss2.png) |![Gorsel 3](Screenshots/ss3.png) |![Gorsel 4](Screenshots/ss4.png) |
 ### Karar Seçenekleri
 * **Sağa Kaydır (Kabul Et):** Önerilen çözümü uygular. Genellikle altın tüketir ancak sağlık barlarını iyileştirebilir.
 * **Sola Kaydır (Reddet):** Teklifi geri çevirir. Kaynakları korur ancak sosyal veya sağlık açısından olumsuz sonuçları olabilir.
 * **Hapse At (Imprison):** Teklif sunan kişiyi zindana gönderir. Eğer teklif Kraliyetle dalga geçiyorsa veya tehlikeliyse, ekonomiyi ve onuru korumak için kişiyi "hücreye" kapatma mekanizmasıdır.
 
 ---
+
 
 ## 📊 Kaynak Yönetimi
 Oyuncunun dengelemesi gereken beş ana gösterge vardır:
