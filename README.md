@@ -1,5 +1,6 @@
 # ACureForTheCrown
-[![Play on Itch.io](https://img.shields.io/badge/Play%20on-Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio)](https://ruhan07.itch.io/a-cure-for-the-crown)
+#[![Play on Itch.io](https://img.shields.io/badge/Play%20on-Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio)](https://ruhan07.itch.io/a-cure-for-the-crown)
+[![Watch the gameplay video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://youtu.be/ozzGt9e8uBc?si=Q-PI27GsJ0IrbKD_)
 **A Cure For The Crown**, "Cell" temalı bir Game Jam için geliştirilmiş bir kaynak yönetimi ve karar verme oyunudur. Tema iki farklı açıdan ele alınmıştır: biyolojik hücreler (**Kanser**) ve hapishane hücreleri (**Zindan**).
 
 ---
