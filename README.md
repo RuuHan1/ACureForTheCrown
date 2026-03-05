@@ -5,14 +5,14 @@
 
 ---
 
-## 📖 Hikaye ve Konsept
+##  Hikaye ve Konsept
 Oyuncu, kızı tedavisi olmayan bir kanser türüne yakalanmış bir Kralın rolünü üstlenir. Bir çözüm bulmak için Kral, halkını ve uzmanları (Simyacılar, Witcher'lar, Doktorlar) tedavi önerileri sunmaya davet eder. Temel amaç, krallığın kaynaklarını etkili bir şekilde yönetirken kızının kanser barını %0'a düşürmektir.
 
-## 🎮 Oynanış Mekanikleri
+##  Oynanış Mekanikleri
 Oyun, karakterlerden gelen teklifleri değerlendirdiğiniz kart tabanlı bir etkileşim sistemine sahiptir.
-## 🎥 Gameplay Video
+##  Gameplay Video
 [![Royal Cure Gameplay](https://img.youtube.com/vi/ozzGt9e8uBc/maxresdefault.jpg)](https://youtu.be/ozzGt9e8uBc)
-## 📸 Oynanış Görüntüleri
+##  Oynanış Görüntüleri
 
 | Giriş Ekranı | Karar Mekanizması ve Kaynak Yönetimi |
 | :---: | :---: |
@@ -26,7 +26,7 @@ Oyun, karakterlerden gelen teklifleri değerlendirdiğiniz kart tabanlı bir etk
 ---
 
 
-## 📊 Kaynak Yönetimi
+##  Kaynak Yönetimi
 Oyuncunun dengelemesi gereken beş ana gösterge vardır:
 
 1.  **Cancer (Hedef):** Ana amaç bu barı %0'a indirmektir.
@@ -37,13 +37,13 @@ Oyuncunun dengelemesi gereken beş ana gösterge vardır:
 
 ---
 
-## 🛠️ Teknik Detaylar
+##  Teknik Detaylar
 * **Motor:** Unity
 * **Dil:** C#
 * **Platform:** PC / WebGL
 * **Görsel Stil:** 2D El çizimi.
 
-## 🕹️ Nasıl Oynanır?
+##  Nasıl Oynanır?
 1. Karakterin diyaloğunu ve getireceği maliyet/fayda oranını okuyun.
 2. Üç eylemden birini seçin: **Kabul Et, Reddet veya Hapse At.**
 3. Beş kaynak barı üzerindeki etkileri izleyin.
